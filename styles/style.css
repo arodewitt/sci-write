@@ -1,0 +1,627 @@
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antiAliased;
+}
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+h1{
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 36pt;
+  line-height: 39pt;
+  color: #404040;
+}
+h2{
+  margin-top:130px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 18pt;
+  font-style: italic;
+  color: #00cc99;
+}
+
+h2 a:link{
+  color: #00cc99;
+  text-decoration: none;
+}
+h2 a:visited{
+  color: #00cc99;
+  text-decoration: none;
+}
+h2 a:hover{
+  color: #404040;
+  text-decoration: underline;
+}
+
+a:link{
+  color: #404040;
+}
+
+/*Styling for header and navigation*/
+
+div.nav{
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+.nav h1{
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 9pt;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 9pt;
+  padding-top: 10px;
+  margin:0;
+  color: #00cc99;
+}
+.appear {
+  animation-name: fadein;
+  animation-duration: 1.5s;
+}
+@keyframes fadein {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: .75;}
+  100% {opacity: 1;}
+}
+.disappear {
+  visibility: hidden;
+}
+
+.nav a:link{
+  font-family: 'Lora', serif;
+  font-size: 9pt;
+  line-height: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00cc99;
+  text-decoration: none;
+}
+.nav a:visited{
+  color: #00cc99;
+  text-decoration: none;
+}
+.nav a:hover{
+  color: #404040;
+  text-decoration: underline;
+}
+.nav p{
+  font-family: 'Lora', serif;
+  font-size: 9pt;
+  line-height: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00cc99;
+}
+.nav img{
+  width:22px;
+  height: 19px;
+  max-width: 100%;
+}
+
+#featured{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 61px;
+}
+
+div.clipsA{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px 0px 0px 0px;
+  margin-bottom: 30px;
+}
+
+.clipsA h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  text-align: center;
+  line-height: 40px;
+  color: #404040;
+  background-color: #fff;
+  display: inline;
+  position: relative;
+  margin-top: -20px;
+  z-index: 200;
+  padding: 6px 12px;
+  max-width: 85%;
+}
+.clipsA h3 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 8pt;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 20px;
+  color: #00cc99;
+  background-color: #fff;
+  margin-top:-10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  z-index: 100;
+  position: absolute;
+}
+p.tags{
+  text-transform: uppercase;
+  text-align: center;
+  color: #bc9f88;
+  letter-spacing: 3px;
+  font-size: 9pt;
+  padding: 0px 0px 15px 0px;
+  margin: auto;
+  width:85%;
+  border-bottom: 1.2px dotted #00cc99;
+}
+p.tease-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 22px;
+  color: #404040;
+  padding: 15px 0px;
+  width: 85%;
+  margin:auto;
+}
+.clipsA h1 a:link{
+  color: #404040;
+  text-decoration: none;
+  font-weight: 400;
+}
+.clipsA h1 a:visited{
+  color: #404040;
+  text-decoration: none;
+  font-weight: 400;
+}
+.clipsA h1 a:hover{
+  color: #da935b;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+div.fullWidth{
+  width: 100%;
+  height: auto;
+  background-color: #00cc99;
+  margin-top: 0;
+  z-index: 50;
+  position: relative;
+}
+div.fullWidth img{
+  width:100%;
+  height:auto;
+  filter: grayscale(100%);
+  display: block;
+  transition-duration: .5s;
+}
+div.fullWidth img:hover{
+  width:100%;
+  height:auto;
+  filter: grayscale(100%);
+  opacity: .5;
+}
+
+/*the big from-the-archive teases*/
+.from-archive {
+  width: 85%;
+  margin: auto;
+  padding: 15px 0px;
+}
+
+.archive-h1 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: italic;
+  font-family: 'Lora', serif;
+  margin-top: 0;
+  line-height: 14px;
+  letter-spacing: 2px;
+  color: #da935b;
+}
+
+.large-tease {
+  font-size: 24px;
+  font-family: 'Lora', serif;
+  color: #da935b;
+  line-height: 1.1;
+  font-weight: 200;
+  margin: 0;
+}
+
+.large-tease::before {
+  content: '⇢';
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  color: #da935b;
+}
+
+.from-archive h2 {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+  padding: 8px 0px 45px 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.from-archive a:link {
+  text-decoration: none;
+  color: #da935b;
+}
+
+.from-archive a:visited {
+  text-decoration: none;
+  color: #da935b;
+}
+
+.from-archive a:hover {
+  text-decoration: none;
+  background-color: #da935b;
+  color: #fff;
+}
+
+/*This is the styling for astrophile*/
+div.threeColumn{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+  margin:auto;
+  justify-content: space-between;
+  padding:30px 0px 15px 0px;
+}
+div.threeColumn h1{
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24pt;
+  text-align: left;
+  line-height: 28pt;
+  color: #404040;
+  margin:0;
+  padding: 6px 0px 12px 0px;
+}
+div.threeColumn h1 a:link{
+  color:#404040;
+  text-decoration: none;
+}
+div.threeColumn h1 a:visited{
+  color:#404040;
+  text-decoration: none;
+}
+div.threeColumn h1 a:hover{
+  color:#00cc99;
+  text-decoration: underline;
+}
+div.threeColumn h2 {
+  text-align: left;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 12pt;
+  font-style: italic;
+  color: #00cc99;
+  margin:0;
+  padding-bottom:20px;
+}
+div.threeColumn h3{
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 9pt;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 14pt;
+  color: #00cc99;
+  padding-bottom: 6pt;
+  margin:0;
+}
+div.threeColumn p{
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  line-height: 14pt;
+  color: #00cc99;
+  letter-spacing: 2px;
+  font-size: 9pt;
+  padding-bottom: 6px;;
+  margin: 0;
+}
+
+/*This is styling for the bio*/
+#about{
+  background-image: url("../images/about-background.png");
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 40px;
+  padding-top: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+#about h2{
+  color:#bc9f88;
+}
+#about p{
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  color: #404040;
+  width: 85%;
+  max-width: 600px;
+  padding:0px 15px;
+}
+.about_headshot-img {
+  margin: 30px auto;
+}
+#about a:link{
+  color: #404040;
+  text-decoration: none;
+}
+#about a:visited{
+  color: #404040;
+  text-decoration: none;
+}
+#about a:hover{
+  color: #bc9f88;
+  text-decoration: none;
+}
+
+/*styling for all HRs*/
+hr.featured {
+  width:100%;
+  height: 5px;
+  background: url("../images/hr1.png") repeat-x 0 0;
+  border: 0;
+}
+hr.nav {
+  width:100%;
+  height: 5px;
+  padding: 0;
+  margin:0;
+  background: url("../images/hr2.png") repeat-x 0 0;
+  border: 0;
+}
+hr.about {
+  width:100%;
+  height: 12px;
+  padding: 0;
+  margin: 0 0 30px 0;
+  background: url("../images/hr3.png") repeat-x 0 0;
+  border: 0;
+}
+
+/*styling for credit aliciadewitt.com*/
+div.footer {
+  background-color: #f2f2f2;
+  background-image: url(../images/hr3.png);
+  background-repeat: repeat-x;
+  width: 100%;
+  position:absolute;
+  bottom:0;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div.footer p{
+  margin:0;
+  font-family: 'Lora', serif;
+  font-size: 10px;
+  line-height: 20px;
+  padding: 0px 6px;
+  letter-spacing: 3px;
+  color: #bc9f88;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+div.footer a:link{
+  color: #bc9f88;
+}
+div.footer a:visited{
+  color: #bc9f88;
+}
+div.footer a:hover{
+  color: #404040;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+
+  /*Styling for navgation*/
+  div.nav{
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  div.nav h1{
+    padding-top:0px;
+  }
+
+  /*Styling for biggest container*/
+  #featured {
+    width: 90%;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  /*styling for from-the-archive big teases*/
+  .from-archive {
+    width: 100%;
+  }
+  .from-archive_feat-heads {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .archive-tease-container {
+    width: 48%;
+  }
+  .large-tease {
+    font-size: 30px;
+  }
+
+  /*stlying for Astrophile*/
+  div.threeColumn {
+    width:100%;
+    margin:auto;
+  }
+  div.threeColumn h1 {
+    font-size: 36px;
+    line-height: 39px;
+  }
+  div.indivColumn {
+    width:30%;
+  }
+
+  /*stlying for featured clips divs*/
+  .clipsA{
+    margin:auto;
+  }
+
+  /*stlying for featured clips typography*/
+  .clipsA h1 {
+    font-size: 36px;
+    line-height: 39px;
+  }
+  p.clipsA {
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 0px 5px 0px;
+    width: 100%;
+  }
+  p.tags {
+    width: 100%;
+  }
+
+  /*Styling for bio part*/
+  #about{
+    width:90%;
+  }
+
+  @media only screen and (min-width: 1100px) {
+      /* For desktop: */
+
+      /*Styling for header and navigation*/
+      div.nav{
+        width: 80%;
+        z-index: 500;
+      }
+      h1.center{
+        position: sticky;
+      }
+
+      /*styling for the meat of the page*/
+      #featured {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        position: relative;
+      }
+      .main {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      p.tags {
+        width: 100%;
+      }
+
+      /*stlying for individual featured clips divs*/
+      div.clipsA {
+        width: 63%;
+        margin: 0;
+      }
+
+      .clipsA h3 {
+        left: 32%;
+      }
+
+      /*From the archive*/
+      .from-archive {
+        display: block;
+        width: 33%;
+        right: 0;
+        position: absolute;
+      }
+      .from-archive_feat-heads {
+        display: block;
+      }
+      .archive-tease-container {
+        width: 100%;
+      }
+
+      /*stlying for Astrophile*/
+
+      div.threeColumn{
+        width: 33%;
+        position: absolute;
+        right: 0;
+        top: 1000px;
+        margin: 15px 0px;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #00cc99;
+      }
+      div.threeColumn h1{
+        font-size: 36px;
+        line-height: 39px;
+      }
+      div.indivColumn{
+        width:100%;
+      }
+
+      /*stlying for Bio*/
+      #about{
+        width: 80%;
+      }
